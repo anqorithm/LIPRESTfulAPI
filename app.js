@@ -63,7 +63,6 @@ const userRouter = require('./api/routes/userRouter');
 const publisherRouter = require('./api/routes/publisherRouter');
 const borrowerRouter = require('./api/routes/borrowerRouter');
 const borrowedBookRouter = require('./api/routes/borrowedBookRouter');
-const stuffRouter = require('./api/routes/employeeRouter');
 const employeeRouter = require('./api/routes/employeeRouter');
 const departmentRouter = require('./api/routes/departmentRouter');
 
@@ -74,7 +73,6 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/publishers', publisherRouter);
 app.use('/api/v1/borrowers', borrowerRouter);
 app.use('/api/v1/borrowed-books', borrowedBookRouter);
-app.use('/api/v1/stuff');
 app.use('/api/v1/employees', employeeRouter);
 app.use('/api/v1/departments', departmentRouter);
 

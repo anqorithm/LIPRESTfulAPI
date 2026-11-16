@@ -1,5 +1,13 @@
 const logger = require('../utils/logger');
-const ip = require('ip');
+const os = require('os');
+
+// Same as ip.address(): the first external IPv4 address of this server.
+const ip = {
+  address: () =>
+    Object.values(os.networkInterfaces())
+      .flat()
+      .find((i) => i.family === 'IPv4' && !i.internal)?.address ?? '127.0.0.1',
+};
 
 /*------------------- 2XX HTTP status codes -------------------*/
 

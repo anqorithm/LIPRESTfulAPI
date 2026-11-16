@@ -463,7 +463,6 @@ const bodyValidatorMiddleware = (method) => {
           .withMessage('first name must be a string'),
         check('lastName')
           .optional()
-          .withMessage('last name is required')
           .isString()
           .withMessage('last name must be a string'),
         check('jobTitle')
